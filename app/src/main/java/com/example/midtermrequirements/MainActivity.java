@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText productIdText, bikeBrandText, bikeNameText, bikeTypeText, bikeSizeType, bikeColorType;
+    EditText productIdText, bikeBrandText, bikeNameText, bikeTypeText, bikeSizeType, bikeColorType, id;
     Button insertData, updateData, viewData, searchData;
     MyDatabaseHelper DB;
 
@@ -87,6 +87,24 @@ public class MainActivity extends AppCompatActivity {
 
                 Boolean checkupdatedata = DB.updateuserdata(ProductIDTXT, BrandTXT, NameTXT, TypeTXT, SizeTXT, ColorTXT);
 
+                if (TextUtils.isEmpty(ProductIDTXT)) {
+                    productIdText.setError("Product ID is Required");
+                    return;
+                }
+                if (TextUtils.isEmpty(BrandTXT)) {
+                    bikeBrandText.setError("Brand is Required");
+                    return;
+                }
+                if (TextUtils.isEmpty(NameTXT)) {
+                    bikeNameText.setError("Product Name is Required");
+                    return;
+                }
+                if (TextUtils.isEmpty(TypeTXT)) {
+                    bikeTypeText.setError("Vehicle Type is Required");
+                    return;
+                }
+
+
                 if(checkupdatedata == true)
                     Toast.makeText(MainActivity.this, "Entry Updated", Toast.LENGTH_SHORT).show();
                 else
@@ -103,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 StringBuffer buffer = new StringBuffer();
                 while(res.moveToNext()){
-                    buffer.append("ID :"+res.getString(0)+"\n");
+                    buffer.append("Product ID :"+res.getString(0)+"\n");
                     buffer.append("Product :"+res.getString(1)+"\n");
                     buffer.append("Bike Brand :"+res.getString(2)+"\n");
                     buffer.append("Bike Name :"+res.getString(3)+"\n");
