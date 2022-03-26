@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D2E7FC"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutHeader"
+        android:background="@drawable/headerbackground"
+        android:padding="5dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textHello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:text="Bike Shoppe"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutHeader"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="-31dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/textView1"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="casual"
+                android:singleLine="true"
+                android:text="Welcome! Everyday is a saving's day in Bike Shoppe! 😋🚴🚴🚴"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <EditText
+                android:id="@+id/bikeNameID"
+                android:layout_width="340dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_text"
+                android:drawableLeft="@drawable/name"
+                android:drawablePadding="10dp"
+                android:fontFamily="casual"
+                android:hint="Bike Name"
+                android:padding="10dp"
+
+                android:paddingLeft="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bikeBrandID" />
+
+            <EditText
+                android:id="@+id/bikeTypeID"
+                android:layout_width="340dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_text"
+                android:drawableLeft="@drawable/gender"
+                android:textColor="@color/black"
+
+                android:drawablePadding="10dp"
+                android:fontFamily="casual"
+                android:hint="Type"
+                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bikeNameID" />
+
+            <EditText
+                android:id="@+id/bikeSizeID"
+                android:layout_width="340dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_text"
+                android:textColor="@color/black"
+
+                android:drawableLeft="@drawable/bd"
+                android:drawablePadding="10dp"
+                android:fontFamily="casual"
+                android:hint="Size"
+                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bikeTypeID" />
+
+            <EditText
+                android:id="@+id/bikeColorID"
+                android:layout_width="340dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_text"
+                android:drawableLeft="@drawable/color"
+                android:drawablePadding="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="casual"
+                android:hint="Color"
+                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bikeSizeID" />
+
+            <EditText
+                android:id="@+id/bikeBrandID"
+                android:layout_width="340dp"
+                android:textColor="@color/black"
+
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_text"
+                android:drawableLeft="@drawable/bike"
+                android:drawablePadding="10dp"
+                android:fontFamily="casual"
+                android:hint="Brand"
+                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ProductID" />
+
+            <EditText
+                android:id="@+id/ProductID"
+                android:layout_width="340dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/edit_text"
+                android:drawableLeft="@drawable/id"
+                android:drawablePadding="10dp"
+                android:fontFamily="casual"
+                android:hint="Product"
+                android:padding="10dp"
+                android:paddingLeft="7dp"
+                android:paddingRight="20sp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+            <Button
+                android:id="@+id/Addbtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:background="@drawable/text2"
+                android:drawableLeft="@drawable/add"
+                android:text="ADD"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bikeColorID"
+                app:layout_constraintVertical_bias="0.124" />
+
+            <Button
+                android:id="@+id/Viewbtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text2"
+                android:drawableLeft="@drawable/view"
+                android:text="VIEW ALL"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.566"
+                app:layout_constraintStart_toEndOf="@+id/Addbtn"
+                app:layout_constraintTop_toBottomOf="@+id/bikeColorID"
+                app:layout_constraintVertical_bias="0.124" />
+
+            <Button
+                android:id="@+id/searchDataButton"
+                android:layout_width="297dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="100dp"
+
+                android:background="@drawable/text2"
+                android:drawableLeft="@drawable/search"
+                android:drawableRight="@drawable/delete"
+                android:text="Search Or delete"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Updatebtnbtn"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/Updatebtnbtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/text2"
+                android:drawableLeft="@drawable/update"
+                android:text="Update"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Addbtn"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
